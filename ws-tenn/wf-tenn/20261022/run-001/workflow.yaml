@@ -18,5 +18,5 @@ nodes:
     type: approval
     approval: {prompt: "Approve the PR?"}
 edges:
-  - {from:requirement, to: implement, required: true}
-  - {from: implement, to:review, required: true}
+  - {from: requirements, to: implement, required: true}
+  - {from: implement, to: review, required: true}
