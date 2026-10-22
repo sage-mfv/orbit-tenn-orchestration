@@ -1,31 +1,69 @@
+evidence: {}
+orchestration_input:
+    user_request: Create a Kotlin based backend project which will have Gradle as the build system and JDK 21 as Java runtime.
+runtime_session:
+    created_at: "2026-10-22T09:37:31Z"
+    id: c9a58981-d45b-499a-a7a1-c026ad836824
+    repositories:
+        - base_branch_or_commit: 8cf7681fcb4b65f2f69dcc999f15da5c709526b0
+          repo_ref: sage-mfv/orbit-tenn-work
+          role: primary
+          target_branch: main
+    status: active
+    workspace_ref: orbit:sage-mfv/orbit-tenn-orchestration:ws-tenn/wf-tenn/20261022/run-001
+sessions:
+    - action: analyse
+      allowed_repository_refs:
+        - sage-mfv/orbit-tenn-work
+      attempt: 1
+      id: c9a58981-d45b-499a-a7a1-c026ad836824
+      node: requirements
+      publish_changes: false
+      repositories:
+        - base_branch_or_commit: 8cf7681fcb4b65f2f69dcc999f15da5c709526b0
+          repo_ref: sage-mfv/orbit-tenn-work
+          role: primary
+          target_branch: main
+      status: starting
+      turn_request:
+        context:
+            action_id: analyse
+            allowed_repository_refs:
+                - sage-mfv/orbit-tenn-work
+            attempt: 1
+            node_id: requirements
+            workflow_id: tenn
+        idempotency_key: tenn:requirements:analyse:1
+        input:
+            instructions: Turn the request into acceptance criteria ...
+            type: prompt
+            user_input: |-
+                <user_request>
+                Create a Kotlin based backend project which will have Gradle as the build system and JDK 21 as Java runtime.
+                </user_request>
+      workflow: tenn
+      workspace_ref: orbit:sage-mfv/orbit-tenn-orchestration:ws-tenn/wf-tenn/20261022/run-001
+state:
+    implement:
+        actions: {}
+        status: pending
+    requirements:
+        actions:
+            analyse:
+                attempt: 1
+                status: starting
+        status: starting
+    review:
+        approval:
+            status: pending
+        status: pending
+        type: approval
 version: 1
 workflow:
-  id: tenn
-
-orchestration_input:
-  user_request: |
-    Create a Kotlin based backend project which will have Gradle as the build system and JDK 21 as Java runtime.
-
+    id: tenn
 workspace:
-  repositories:
-    application:
-      repo_ref: sage-mfv/orbit-tenn-work
-      base_branch_or_commit: main
-      role: primary
-
-state:
-  requirements:
-    status: pending
-    actions: {}
-  implement:
-    status: pending
-    actions: {}
-  review:
-    type: approval
-    status: pending
-    approval:
-      status: pending
-
-evidence: {}
-runtime_session: {}
-sessions: []
+    repositories:
+        application:
+            base_branch_or_commit: main
+            repo_ref: sage-mfv/orbit-tenn-work
+            role: primary
