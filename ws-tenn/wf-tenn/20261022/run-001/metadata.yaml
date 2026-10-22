@@ -24,7 +24,8 @@ sessions:
           repo_ref: sage-mfv/orbit-tenn-work
           role: primary
           target_branch: main
-      status: starting
+      status: running
+      turn_id: 099240ce-e8a5-4c81-bd8e-fbca0ba1059c
       turn_request:
         context:
             action_id: analyse
@@ -51,8 +52,8 @@ state:
         actions:
             analyse:
                 attempt: 1
-                status: starting
-        status: starting
+                status: running
+        status: running
     review:
         approval:
             status: pending
