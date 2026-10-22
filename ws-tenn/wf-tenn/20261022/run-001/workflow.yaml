@@ -1,0 +1,22 @@
+version: 1
+id: kotlin-feature
+inputs: {user_request: {type: string, required: true}}
+repositories: {model: claude-haiku-4-5-20251001, runtime_environment: kotlin-node}
+nodes:
+  - id: requirements
+    repositories: [application]
+    actions: [{id: analyse, type: prompt, instructions: "Turn the request into acceptance criteria ..."}]
+  - id: implement
+    repositories: [application]
+    actions:
+      - id: implement_code
+        type: prompt
+        publish_changes: true
+        consumes: [{node: requirements, artifact: requirements_doc}]
+        instructions: "Implement ... run ./gradlew test ... publish the PR."
+  - id: review
+    type: approval
+    approval: {prompt: "Approve the PR?"}
+edges:
+  - {from:requirement, to: implement, required: true}
+  - {from: implement, to:review, required: true}
