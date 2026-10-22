@@ -1,7 +1,7 @@
 version: 1
 id: tenn
 inputs: {user_request: {type: string, required: true}}
-runtime_defaults: {model: claude-haiku-4-5-20251001, runtime_environment: kotlin-node}
+runtime_defaults: {model: claude-haiku-4-5-20251001, runtime_environment: default}
 repositories: {application: {required: true, runtime_role: primary}}
 nodes:
   - id: requirements
