@@ -28,13 +28,14 @@ orchestration_input:
 runtime_session:
     cost_usd: 0.11149300000000001
     created_at: "2026-10-22T09:37:31Z"
+    deleted_at: "2026-10-22T09:46:05Z"
     id: c9a58981-d45b-499a-a7a1-c026ad836824
     repositories:
         - base_branch_or_commit: 8cf7681fcb4b65f2f69dcc999f15da5c709526b0
           repo_ref: sage-mfv/orbit-tenn-work
           role: primary
           target_branch: main
-    status: active
+    status: deleted
     workspace_ref: orbit:sage-mfv/orbit-tenn-orchestration:ws-tenn/wf-tenn/20261022/run-001
 sessions:
     - action: analyse
