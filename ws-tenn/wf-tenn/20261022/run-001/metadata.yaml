@@ -1,7 +1,25 @@
+cost:
+    by_node:
+        requirements:
+            cache_creation_input_tokens: 0
+            cache_read_input_tokens: 22
+            cost_usd: 0.0174062
+            input_tokens: 16258
+            output_tokens: 56
+            total_tokens: 16314
+    currency: USD
+    source: astra_claude_runtime
+    total_cache_creation_input_tokens: 0
+    total_cache_read_input_tokens: 22
+    total_cost_usd: 0.0174062
+    total_input_tokens: 16258
+    total_output_tokens: 56
+    total_tokens: 16314
 evidence: {}
 orchestration_input:
     user_request: Create a Kotlin based backend project which will have Gradle as the build system and JDK 21 as Java runtime.
 runtime_session:
+    cost_usd: 0.0174062
     created_at: "2026-10-22T09:37:31Z"
     id: c9a58981-d45b-499a-a7a1-c026ad836824
     repositories:
@@ -16,6 +34,7 @@ sessions:
       allowed_repository_refs:
         - sage-mfv/orbit-tenn-work
       attempt: 1
+      cost_usd: 0.0174062
       id: c9a58981-d45b-499a-a7a1-c026ad836824
       node: requirements
       publish_changes: false
@@ -24,7 +43,44 @@ sessions:
           repo_ref: sage-mfv/orbit-tenn-work
           role: primary
           target_branch: main
-      status: running
+      result:
+        action_type: prompt
+        cost_usd: 0.0174062
+        output:
+            metrics:
+                duration_ms: 114184
+                num_turns: 1
+                total_cost_usd: 0.0174062
+                usage:
+                    cache_creation_input_tokens: 0
+                    cache_read_input_tokens: 22
+                    input_tokens: 16258
+                    output_tokens: 56
+                    total_tokens: 16314
+            session_id: 8bdfed9d-347b-4d68-a2fa-a125ba31cc7b
+            summary: |-
+                I'll create a Kotlin-based backend project with Gradle build system and JDK 21. Let me first explore what repositories are available in the workspace to understand the context better.
+
+                <function=Glob>
+                <parameter=pattern>
+                **/*
+                </parameter>
+                </function>
+                </tool_call>
+        result_truncated: false
+        session_id: c9a58981-d45b-499a-a7a1-c026ad836824
+        status: succeeded
+        turn_id: 099240ce-e8a5-4c81-bd8e-fbca0ba1059c
+        usage:
+            cache_creation_input_tokens: 0
+            cache_read_input_tokens: 22
+            input_tokens: 16258
+            output_tokens: 56
+            total_tokens: 16314
+      status: succeeded
+      transcript:
+        provider: s3
+        status: not_configured
       turn_id: 099240ce-e8a5-4c81-bd8e-fbca0ba1059c
       turn_request:
         context:
@@ -35,13 +91,17 @@ sessions:
             node_id: requirements
             workflow_id: tenn
         idempotency_key: tenn:requirements:analyse:1
-        input:
-            instructions: Turn the request into acceptance criteria ...
-            type: prompt
-            user_input: |-
-                <user_request>
-                Create a Kotlin based backend project which will have Gradle as the build system and JDK 21 as Java runtime.
-                </user_request>
+        input_summary:
+            instructions_bytes: 45
+            instructions_sha256: b0f62a124b331779eed6fa15dd71939d17bc08eab690466cfa766aa481e8d459
+            user_input_bytes: 139
+            user_input_sha256: 772754ce9f921fb3637205c6fab9689ceca9fba71bef1bc9b6c8535fa47a2396
+      usage:
+        cache_creation_input_tokens: 0
+        cache_read_input_tokens: 22
+        input_tokens: 16258
+        output_tokens: 56
+        total_tokens: 16314
       workflow: tenn
       workspace_ref: orbit:sage-mfv/orbit-tenn-orchestration:ws-tenn/wf-tenn/20261022/run-001
 state:
@@ -52,8 +112,42 @@ state:
         actions:
             analyse:
                 attempt: 1
-                status: running
-        status: running
+                result:
+                    action_type: prompt
+                    cost_usd: 0.0174062
+                    output:
+                        metrics:
+                            duration_ms: 114184
+                            num_turns: 1
+                            total_cost_usd: 0.0174062
+                            usage:
+                                cache_creation_input_tokens: 0
+                                cache_read_input_tokens: 22
+                                input_tokens: 16258
+                                output_tokens: 56
+                                total_tokens: 16314
+                        session_id: 8bdfed9d-347b-4d68-a2fa-a125ba31cc7b
+                        summary: |-
+                            I'll create a Kotlin-based backend project with Gradle build system and JDK 21. Let me first explore what repositories are available in the workspace to understand the context better.
+
+                            <function=Glob>
+                            <parameter=pattern>
+                            **/*
+                            </parameter>
+                            </function>
+                            </tool_call>
+                    result_truncated: false
+                    session_id: c9a58981-d45b-499a-a7a1-c026ad836824
+                    status: succeeded
+                    turn_id: 099240ce-e8a5-4c81-bd8e-fbca0ba1059c
+                    usage:
+                        cache_creation_input_tokens: 0
+                        cache_read_input_tokens: 22
+                        input_tokens: 16258
+                        output_tokens: 56
+                        total_tokens: 16314
+                status: succeeded
+        status: succeeded
     review:
         approval:
             status: pending
